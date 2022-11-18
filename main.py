@@ -1,11 +1,16 @@
-import copy
 
-import docx
+import tkinter as tk
+from tkinter import filedialog
 from docx import Document
 import docxedit
 
 if __name__ == '__main__':
-    doc = Document("binder.weibliche_aerzte.docx")
+
+    root = tk.Tk()
+    root.withdraw()
+
+    path = filedialog.askopenfilename()
+    doc = Document(path)
     # adds <lb/> to any linebreak
     docxedit.replace_string(doc, "\n", "<lb/>\n ")
     new_doc = Document()
@@ -60,4 +65,5 @@ if __name__ == '__main__':
 
         para.add_run("</p>")
 
-    new_doc.save("test.docx")
+    new_doc.save("result.docx")
+
