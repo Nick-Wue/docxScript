@@ -18,7 +18,7 @@ if __name__ == '__main__':
     # iterate over all paragraphs and copy contents to new paragraphs
     for p_old in doc.paragraphs:
         para = new_doc.add_paragraph("<p>")
-        new_doc.paragraphs[-1].paragraph_format.alignment = p_old.paragraph_format.alignment
+        '''new_doc.paragraphs[-1].paragraph_format.alignment = p_old.paragraph_format.alignment
         new_doc.paragraphs[-1].paragraph_format.first_line_indent = p_old.paragraph_format.first_line_indent
         new_doc.paragraphs[-1].paragraph_format.keep_together = p_old.paragraph_format.keep_together
         new_doc.paragraphs[-1].paragraph_format.keep_with_next = p_old.paragraph_format.keep_with_next
@@ -28,12 +28,12 @@ if __name__ == '__main__':
         new_doc.paragraphs[-1].paragraph_format.right_indent = p_old.paragraph_format.right_indent
         new_doc.paragraphs[-1].paragraph_format.space_after = p_old.paragraph_format.space_after
         new_doc.paragraphs[-1].paragraph_format.space_before = p_old.paragraph_format.space_before
-        new_doc.paragraphs[-1].paragraph_format.widow_control = p_old.paragraph_format.widow_control
+        new_doc.paragraphs[-1].paragraph_format.widow_control = p_old.paragraph_format.widow_control'''
 
 
         for r_old in p_old.runs:
             para.add_run(r_old.text)
-            para.runs[-1].font.italic = r_old.font.italic
+            '''para.runs[-1].font.italic = r_old.font.italic
             para.runs[-1].font.all_caps = r_old.font.all_caps
             para.runs[-1].font.complex_script = r_old.font.complex_script
             para.runs[-1].font.double_strike = r_old.font.double_strike
@@ -59,7 +59,7 @@ if __name__ == '__main__':
             para.runs[-1].font.size = r_old.font.size
             para.runs[-1].font.name = r_old.font.name
             para.runs[-1].font.cs_bold = r_old.font.cs_bold
-            para.runs[-1].font.cs_italic = r_old.font.cs_italic
+            para.runs[-1].font.cs_italic = r_old.font.cs_italic'''
 
 
 
